@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07130f">
+  <title>Bangladesh Local Bus Simulator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <div id="loading">
+    <h1>🇧🇩 BANGLADESH BUS SIMULATOR</h1>
+    <p>Preparing your journey...</p>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">🚌 BD <span>BUS SIMULATOR</span></div>
+    <button id="fullscreenBtn">⛶ Fullscreen</button>
+  </header>
+
+  <main>
+    <section class="game-heading">
+      <p class="eyebrow">BANGLADESH • 3D DRIVING EXPERIENCE</p>
+      <h1>Local Bus Simulator</h1>
+      <p>Kanchpur → Mograpara → Sonargaon Museum</p>
+    </section>
+
+    <section class="game-frame">
+      <div id="gameContainer">
+        <div id="hud">
+          <div class="hud-card">
+            <small>SPEED</small>
+            <strong><span id="speed">0</span> KM/H</strong>
+          </div>
+          <div class="hud-card">
+            <small>ROUTE</small>
+            <strong id="routeName">KANCHPUR</strong>
+          </div>
+          <div class="hud-card">
+            <small>PASSENGERS</small>
+            <strong id="passengers">0</strong>
+          </div>
+        </div>
+        <div id="message">Press START to begin your journey</div>
+      </div>
+      <div class="game-actions">
+        <button id="startBtn" class="primary">▶ START GAME</button>
+        <button id="pauseBtn">Ⅱ PAUSE</button>
+        <button id="restartBtn">↻ RESTART</button>
+      </div>
+    </section>
+
+    <section class="controls-info">
+      <h2>Driving Controls</h2>
+      <p>PC: W / ↑ Accelerate · S / ↓ Brake · A / D Steer · H Horn</p>
+      <p>Mobile: Use the driving controls below.</p>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
