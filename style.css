@@ -1,0 +1,239 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #07130f;
+  color: #f2fff6;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+#loading {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #07130f;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 15px;
+}
+
+#loading p {
+  color: #9bb6a4;
+}
+
+.topbar {
+  height: 70px;
+  padding: 0 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0b1d14;
+  border-bottom: 1px solid #214b32;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 900;
+  color: #42e59a;
+}
+
+.brand span {
+  color: white;
+}
+
+button {
+  border: 1px solid #315c40;
+  background: #142b1d;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #244a31;
+}
+
+main {
+  width: min(1100px, 94%);
+  margin: 35px auto;
+}
+
+.game-heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.eyebrow {
+  color: #42e59a;
+  letter-spacing: 3px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.game-heading h1 {
+  font-size: clamp(28px, 5vw, 48px);
+  margin: 12px 0;
+}
+
+.game-heading > p:last-child {
+  color: #a9c1b0;
+}
+
+.game-frame {
+  background: #0d2116;
+  padding: 12px;
+  border: 1px solid #254d35;
+  border-radius: 17px;
+  box-shadow: 0 20px 60px #0008;
+}
+
+#gameContainer {
+  width: 100%;
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #91c9df;
+}
+
+#gameContainer canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#hud {
+  position: absolute;
+  z-index: 5;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.hud-card {
+  background: #06140ddd;
+  border: 1px solid #ffffff30;
+  padding: 10px 15px;
+  border-radius: 9px;
+  min-width: 100px;
+}
+
+.hud-card small {
+  display: block;
+  color: #9db8a5;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.hud-card strong {
+  font-size: 15px;
+  color: #42e59a;
+}
+
+#message {
+  position: absolute;
+  z-index: 5;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #06140ddd;
+  padding: 12px 20px;
+  border-radius: 9px;
+  text-align: center;
+  width: max-content;
+  max-width: 90%;
+  font-size: 13px;
+}
+
+.game-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 15px 0 5px;
+}
+
+.primary {
+  background: #159b5c;
+  border-color: #42e59a;
+}
+
+.primary:hover {
+  background: #20b76d;
+}
+
+.controls-info {
+  margin: 25px 0;
+  padding: 22px;
+  border: 1px solid #254d35;
+  border-radius: 12px;
+  background: #0d2116;
+  line-height: 2;
+}
+
+.controls-info h2 {
+  color: #42e59a;
+  margin-bottom: 8px;
+}
+
+.controls-info p {
+  color: #b6cabc;
+  font-size: 14px;
+}
+
+@media(max-width: 600px) {
+  .topbar {
+    padding: 0 3%;
+    height: 60px;
+  }
+
+  .brand {
+    font-size: 14px;
+  }
+
+  main {
+    width: 96%;
+    margin-top: 24px;
+  }
+
+  #gameContainer {
+    height: 480px;
+  }
+
+  #hud {
+    left: 7px;
+    right: 7px;
+    top: 7px;
+    gap: 5px;
+  }
+
+  .hud-card {
+    min-width: 0;
+    padding: 8px;
+    flex: 1;
+  }
+
+  .hud-card strong {
+    font-size: 11px;
+  }
+
+  .hud-card small {
+    font-size: 8px;
+  }
+
+  #message {
+    font-size: 11px;
+  }
+}
